@@ -89,7 +89,7 @@ def main():
                  facet_wrap(Variable2, scales='free_y')
         else:
             p1 = ggplot(data) + \
-                 geom_smooth(aes('Date', Variable1, color=Variable2), method='glm') + \
+                 geom_smooth(aes('Date', Variable1, color=Variable2), method='lm') + \
                  theme_bw() + \
                  theme(axis_text_x=element_text(rotation=90)) + \
                  labs(title='Date', y=Variable1) + \
@@ -106,7 +106,7 @@ def main():
                  labs(title='Date', y=Variable1)
         else:
             p1 = ggplot(data) + \
-                 geom_smooth(aes('Date', Variable1, color=Variable2), method='glm') + \
+                 geom_smooth(aes('Date', Variable1, color=Variable2), method='lm') + \
                  theme_bw() + \
                  theme(axis_text_x=element_text(rotation=90)) + \
                  labs(title='Date', y=Variable1)
