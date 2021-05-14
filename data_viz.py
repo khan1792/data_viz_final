@@ -68,7 +68,7 @@ def main():
     st.plotly_chart(fig5)
 
     st.header('Influence of Tweets')
-    st.write('In this section you can investigate the temporal trends of the influence of tweets based on a target variable you are interested in, such as gender difference. The temporal trends are fit through regression models. There are two types of regression models you can choose. The default model is generalized linear model. You can also choose locally weighted regression model by checking the box of "Non-linear fit" if you want to fit a nonlinear trends line. But it would be a little bit time-comsuming. Please uncheck this box if you only want to explore other sections to speed up the website lodading process.')
+    st.write('In this section you can investigate the temporal trends of the influence of tweets based on a target variable you are interested in, such as gender difference. The temporal trends are fit through regression models. There are two types of regression models you can choose. The default model is generalized linear model. You can also choose locally weighted regression model by checking the box of "Non-linear fit" if you want to fit a nonlinear trends line. But it would be a little bit time-comsuming. Please uncheck this box, if you only want to explore other sections, to speed up the website lodading process.')
     data['Impact'] = data['Impact'].apply(lambda x: x + 1)
     data['Number of retweets'] = data['Twitter Retweets'].apply(lambda x: x + 1)
     Variable1 = st.selectbox('Which influence metrics do you want to explore?',
